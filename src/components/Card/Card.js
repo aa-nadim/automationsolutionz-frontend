@@ -3,16 +3,15 @@ import { useState } from 'react';
 
 const Card = (props) => {
     const { availability, code, durability, max_durability, mileage, minimum_rent_period, name, needing_repair, price } = props.card;
-    let [count, setCount] = useState(1);
-    
+    let count = 1;
     return (
             <tbody>
                 <tr>
-                <th scope="row">{count || setCount(count++)}</th>
+                <th scope="row">{count++}</th>
                 <td>{name}</td>
                 <td>{code}</td>
-                <td>{availability}</td>
-                <td>{needing_repair}</td>
+                <td>{availability ? "true" : "false"}</td>
+                <td>{needing_repair ? "true" : "false"}</td>
                 <td>{durability}</td>
                 <td>{mileage}</td>
                 </tr>

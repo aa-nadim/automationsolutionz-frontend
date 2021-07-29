@@ -3,7 +3,6 @@ import Card from '../Card/Card';
 import fakeData from '../../fakeData/Data (1).json';
 
 const Cards = () => {
-    console.log(fakeData);
     return (
         <div>
             <h3>cards</h3>
