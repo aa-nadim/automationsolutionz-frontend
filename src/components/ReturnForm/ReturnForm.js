@@ -44,11 +44,12 @@ const ReturnForm = ({returnModalIsOpen, closeReturnModal}) => {
                 <h2>Return a product</h2>
                 <div>
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <p>Write a product's name excetly same the damo products..</p>
+                    <p>Write a product's name excetly same the damo products(product's name/code)..</p>
                     <div className="mt-3 d-flex justify-content-between">
                         <h5>Product Name</h5>
                         <input className="productName" name="name" defaultValue={prductNameAndCode} {...register("name",{ required: true })}  placeholder="Case sensitive" />
                     </div>
+                    
                     <div className="mt-3 d-flex justify-content-end">
                         <input onClick={openReturnPriceModal} type="submit"/>
                         <ReturnPrice returnPriceModalIsOpen={returnPriceModalIsOpen} closeReturnPriceModal={closeReturnPriceModal} selectedProduct={selectedProduct}></ReturnPrice>

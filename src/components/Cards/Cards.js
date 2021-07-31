@@ -49,6 +49,7 @@ const Cards = () => {
             </nav>
             {/* <h3>cards</h3>
             <p>There are {fakeData.length} cards.</p> */}
+            <h1>AutomationSolutionz-frontend-Task</h1>
             <div className="m-5">
                 <table className="table table-bordered">
                     <thead>
