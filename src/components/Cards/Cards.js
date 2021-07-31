@@ -60,6 +60,7 @@ const Cards = () => {
                     <th scope="col">Need to Repair</th>
                     <th scope="col">Durability</th>
                     <th scope="col">Mileage</th>
+                    <th scope="col">Price</th>
                     </tr>
                     </thead>
                 {

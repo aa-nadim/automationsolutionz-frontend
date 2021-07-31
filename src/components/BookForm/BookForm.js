@@ -31,6 +31,7 @@ const BookForm = ({modalIsOpen, closeModal}) => {
     function closeBookPriceModal() {
         setBookPriceIsOpen(false);
     }
+    let prductNameAndCode = fakeData[0].name.concat('/',fakeData[0].code);
     return (
         <div>
             
@@ -46,7 +47,7 @@ const BookForm = ({modalIsOpen, closeModal}) => {
                     <p>Write a product's name excetly same the damo products..</p>
                     <div className="mt-3 d-flex justify-content-between">
                         <h5>Product Name</h5>
-                        <input className="productName" name="name" defaultValue={fakeData[0].name} {...register("name",{ required: true })}  placeholder="Case sensitive" />
+                        <input className="productName" name="name" defaultValue={prductNameAndCode} {...register("name",{ required: true })}  placeholder="Case sensitive" />
                     </div>
                     <div className="mt-3 d-flex justify-content-between">
                         <h5>From</h5>

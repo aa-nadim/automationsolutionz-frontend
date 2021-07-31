@@ -14,6 +14,7 @@ const Card = (props) => {
                 <td>{needing_repair ? "true" : "false"}</td>
                 <td>{durability}</td>
                 <td>{mileage}</td>
+                <td>{price}</td>
                 </tr>
             </tbody>
         

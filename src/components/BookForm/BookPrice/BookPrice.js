@@ -17,6 +17,8 @@ Modal.setAppElement('#root');
 
 const BookPrice = ({bookPriceModalIsOpen, closeBookPriceModal, selectedProduct}) => {
     let totalDays = 0;
+    let totalRent;
+
     if(selectedProduct !== null) {
         let yearsFrom = parseInt(selectedProduct.fromdate.slice(-4));
         let monthsFrom = parseInt(selectedProduct.fromdate.slice(3,5));
@@ -35,11 +37,19 @@ const BookPrice = ({bookPriceModalIsOpen, closeBookPriceModal, selectedProduct})
             yearsTo = yearsTo - 1;
         }
         totalDays = 365*(yearsTo-yearsFrom)+30*(monthsTo-monthsFrom)+(daysTo-daysFrom);
-        // console.log(selectedProduct.name);
-        // const productName = fakeData.find(element.name => )
-        // console.log(fakeData.findIndex(isLargeNumber));
+        
+        let code = selectedProduct.name.slice(-2);
+        let selectedProductIndex;
+        for(let i=0;i<fakeData.length;i++){
+            if(fakeData[i].code === code){
+                selectedProductIndex = i;break;
+            }
+        }
+        
+        totalRent = totalDays*fakeData[selectedProductIndex].price;
+
     }
-    console.log(selectedProduct);
+
     
     return (
         <div>
@@ -53,7 +63,7 @@ const BookPrice = ({bookPriceModalIsOpen, closeBookPriceModal, selectedProduct})
                     <h2>Book a product</h2>
                 </div>
                 <div>
-                    <p>Your estimated price is ${totalDays}.</p>
+                    <p>Your estimated price is ${totalRent}.</p>
                     <p>Do you want to procedure?</p>
                 </div>
             </Modal>

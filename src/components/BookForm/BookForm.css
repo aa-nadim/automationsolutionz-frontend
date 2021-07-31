@@ -1,6 +1,9 @@
+.productName {
+  width: 300px;
+}
 .dateFrom {
-  width: 100px;
+  width: 120px;
 }
 .dateTo {
-  width: 100px;
+  width: 120px;
 }
