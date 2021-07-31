@@ -12,12 +12,6 @@ function App() {
     <div className="App">
       <Router>
         <div>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-          </ul>
-          <hr />
           <Switch>
             <Route exact path="/">
             <Cards></Cards>
