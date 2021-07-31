@@ -10,5 +10,5 @@
   • React, React Hock Form, React Modal, Bootstrap
 
 ## Before the Test
-  • run `git clone https://github.com/aa-nadim/Like-Electronics-client-side.git` in the terminal
-  • run `npm i` in the terminal
+  • run `git clone https://github.com/aa-nadim/Like-Electronics-client-side.git` in the terminal.
+  • run `npm i` in the terminal.
